@@ -3,11 +3,11 @@ package by.academy.homework1;
 public class task4 {
 	public static void main (String[] args) {
 		int x = 2;
-		int s = 1; /*степень*/
-		int r = x; /*результат*/
+		int s = 1; /*СЃС‚РµРїРµРЅСЊ*/
+		int r = x; /*СЂРµР·СѓР»СЊС‚Р°С‚*/
 		
 		do {
-			System.out.println(x + " в степени " + s + " = " + r);
+			System.out.println(x + " РІ СЃС‚РµРїРµРЅРё " + s + " = " + r);
 			s++;
 			r = r * x;
 		}

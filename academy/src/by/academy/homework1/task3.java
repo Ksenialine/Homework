@@ -6,14 +6,14 @@ public class task3 {
 	public static void main (String[] args) {
 		
 		Scanner scanner = new Scanner (System.in); {
-		System.out.println("Ââåäèòå ÷èñëî îò 1 äî 10:");
+		System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð¾Ñ‚ 1 Ð´Ð¾ 10:");
 		int x = scanner.nextInt();
 		
 		if (x >= 1 && x <= 10) {
 			
-			int i = x; /*÷èñëî*/
-			int y = 1; /*óìíîæåíèå*/
-			int r = 1; /*ðåçóëüòàò*/
+			int i = x; /*Ñ‡Ð¸ÑÐ»Ð¾*/
+			int y = 1; /*ÑƒÐ¼Ð½Ð¾Ð¶Ð°ÐµÐ¼*/
+			int r = 1; /*Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚*/
 			
 			while (y<=10) {
 				r = i * y;
@@ -21,7 +21,7 @@ public class task3 {
 				y++;
 				}
 		} else
-			System.out.println("Îøèáêà, ÷èñëî äîëæíî áûòü îò 1 äî 10.");
+			System.out.println("ÐžÑˆÐ¸Ð±ÐºÐ°, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð¾Ñ‚ 1 Ð´Ð¾ 10.");
 		} scanner.close();
 	}
 }

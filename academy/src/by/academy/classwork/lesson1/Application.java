@@ -4,7 +4,7 @@ public class Application {
 	public static void main (String[] args) {
 		Cat metchik = new Cat();
 		metchik.age = 2;
-		metchik.nickname = "Ìåò÷èê";
+		metchik.nickname = "ĞœĞµÑ‚Ñ‡Ğ¸Ğº";
 		
 		Cat n = new Cat();
 		n.age = 5;

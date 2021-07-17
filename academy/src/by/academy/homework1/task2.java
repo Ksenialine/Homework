@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class task2 {
 	public static void main (String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Введите тип данных: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‚РёРї РґР°РЅРЅС‹С…: ");
 		String i = scanner.nextLine();
 		
-		System.out.println("Введите переменную: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРµРјРµРЅРЅСѓСЋ: ");
 		int x = scanner.nextInt();
 		
 		switch (i) {
