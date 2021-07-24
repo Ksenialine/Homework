@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Task3 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner (System.in);
-		System.out.println("Введите два слова для сравнения:");
+		System.out.println("Введите два слова:");
 		String w1 = scanner.nextLine();
 		String w2 = scanner.nextLine();
 		

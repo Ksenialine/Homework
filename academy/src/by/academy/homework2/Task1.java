@@ -3,31 +3,36 @@ package by.academy.homework2;
 import java.util.Scanner;
 
 public class Task1 {
-	public static void main (String[] args) {
+	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Введите два слова для анализа:");
-		String i = scanner.nextLine();
-		String g = scanner.nextLine();
+		System.out.println("Введите 2 слова для анализа:");
+		String word1 = scanner.nextLine();
+		String word2 = scanner.nextLine();}
 		
-		char[] word1 = i.toCharArray();
-		for (int x = 0; x < word1.length; x++)
-			System.out.println("Element [" + x + "]:" + word1[x]);
-		char[] word2 = g.toCharArray();
-		for (int y = 0; y < word2.length; y++)
-			System.out.println("Element [" + y + "]:" + word2[y]);
-		
-		int len1 = word1.length;
-		int len2 = word2.length;
-		
-		for (var a = 0; a < len1; ++a) {
-			var cac = word1[a];
-			for (var b = 0; b < len2; ++b) {
-				if(cac == word2[b]) {
-					System.out.print("совпадение" + cac);
-					break;
-				}	
-			}	
+		public boolean permutation (String word1, String word2) {
+
+		char[] word1Array = word1.toCharArray();
+		char[] word2Array = word2.toCharArray();
+		int[] letters = new int[128];
+
+		if (word1.length() != word2.length()) {
+			return false;
 		}
-        scanner.close();
+		for (char c : word1Array) {
+			letters[c]++;
+		}
+		for (int i = 0; i < word2.length(); i++) {
+			int c = (int) word2.charAt(i);
+			letters[c]--;
+			if (letters[c] < 0) {
+				return false;
+			}
+			
+			
+		}
+		
+		return true;
+		
 	}
+
 }

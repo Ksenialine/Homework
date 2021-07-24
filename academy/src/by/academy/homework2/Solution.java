@@ -28,6 +28,7 @@ public class Solution {
 		}
 
 		int result = pairs(k, arr);
+		
 		System.out.println(result);
 
 		scanner.close();
