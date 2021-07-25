@@ -3,64 +3,40 @@ package by.academy.homework2;
 import java.util.Scanner;
 
 public class Deal {
-
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Введите кол-во игроков в покер: ");
-		int players = sc.nextInt();
+		int players = scanner.nextInt();
 		int cardsPerPlayer = 5;
 
-		String[] suits = { "Пика", "Бубен", "Черв", "Крестя" };
+		if (players <= 1) {
+			System.out.println("Игры не получится :(");
+		} else if (players >= 2 && players <= 10) {
+			System.out.println("Играем :)");
+		}
 
+		String[] suits = { "Пика", "Буба", "Черва", "Треф" };
 		String[] rank = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Валет", "Королева", "Король", "Туз" };
 
-		int n = suits.length * rank.length; // количество карт
+		int n = suits.length * rank.length;
 
-		if (players == 0) {
-			System.out.println("Игра прекращена.");
-			break;
-
-		} else if (players < 0) {
-
-			System.out.println("Число игроков не может быть меньше 0");
-
-		} else {
-
-			System.out.println("Слишком много игроков!");
+		String[] coloda = new String[n];
+		for (int x = 0; x < rank.length; x++) {
+			for (int y = 0; y < suits.length; y++) {
+				coloda[suits.length * x + y] = rank[x] + " " + suits[y];
+			}
 		}
-	}
-
-	}else{System.out.println("Вы ввели не число, или Ваше число слишком большое!");
-
-	}}
-
-	// часть 3 - инициализация колоды
-	String[] deck = new String[n];for(
-	int i = 0;i<rank.length;i++)
-	{
-		for (int j = 0; j < suits.length; j++) {
-			deck[suits.length * i + j] = rank[i] + " " + suits[j];
+		for (int i = 0; i < n; i++) {
+			int r = i + (int) (Math.random() * (n - i));
+			String temp = coloda[r];
+			coloda[r] = coloda[i];
+			coloda[i] = temp;
 		}
+		for (int i = 0; i < players * cardsPerPlayer; i++) {
+			System.out.println(coloda[i]);
+			if (i % cardsPerPlayer == cardsPerPlayer - 1)
+				System.out.println();
+		}
+		scanner.close();
 	}
-
-	// часть 4 - перетасовка колоды
-	for(
-	int i = 0;i<n;i++)
-	{
-		int r = i + (int) (Math.random() * (n - i)); // случайная карта в колоде
-		String temp = deck[r];
-		deck[r] = deck[i];
-		deck[i] = temp;
-	}
-
-	// часть 5 - перетасованная колода выводится на экран
-	for(
-	int i = 0;i<players*cardsPerPlayer;i++)
-	{
-		System.out.println(deck[i]);
-		if (i % cardsPerPlayer == cardsPerPlayer - 1)
-			System.out.println();
-	}
-}
-
 }
