@@ -17,7 +17,7 @@ public class Task2 {
 		for (int x = 1; x < words.length; x++) {
 			if (words[x].length() < smallest.length()) {
 				smallest = words[x];
-				System.out.println("Самое маленькое слово: " + words[x]);
+				System.out.println("Самое короткое слово: " + words[x]);
 				break;
 			}
 		}
