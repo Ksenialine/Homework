@@ -32,9 +32,7 @@ public class Task1 {
 			}
 			if (isPermutation) {
 				System.out.println("Перестановка!");
-
 			}
-
 		}
 		scanner.close();
 	}
